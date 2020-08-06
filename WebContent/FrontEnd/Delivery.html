@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>주문/배송조회</title>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/Delivery.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/bottom_bar.css" />
+
+
+
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <ul>
+            <li class="back"><a href="#"><img src="image/back.png"></a></li>
+            <li class="search"><a href="#"><img src="image/search.png"></a></li>
+            <div class="searchbox">
+                <input placeholder="search..." type="text" />
+                <a href=""><img src="image/search.png"></a>
+            </div>
+            <li class="title"><h1>주문/배송조회</h1></li>
+            <li class="cart"><a href="ShoppingCart.html"><img src="image/shopping_cart.png"></a></li>
+        </ul>
+    </div>
+
+    <!-- 기간 검색 -->
+    <div id="search_wrap">
+        <div id="search2">
+            <ul class="search2">
+                <li>1주일</li>
+                <li>1개월</li>
+                <li>3개월</li>
+                <li>조건검색</li>
+            </ul>
+            <div id="date">
+                <ul class="date">
+                    <li class="cal"><input type="date"></li>
+                    <li class="blank">~</li>
+                    <li class="cal"><input type="date"></li>
+                </ul>
+                <span id="btn">검색</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 본문 - 주문없을 시 -->
+    <!-- <div id="text_area"><p>주문 내역이 없습니다.</p></div>
+    <div id="blank_area"></div> -->
+
+    <!-- 본문 - 주문 있을 때 -->
+    <div id="order_list_wrap">
+        <div class="order_box">
+            <div class="order_info">
+                <div class="deliv_method">택배배송 200804P06827051</div>
+                <div class="deliv_sub">2020.08.04. 23:38:18</div>
+                <div class="menu_vertical"><img src="image/menu_vertical.png"></div>
+            </div>
+            <ul class="order_item_ul">
+                <li>
+                    <div class="order_item_content">
+                        <div class="order_item_img"><img src="image/SJSJ.jpg"></div>
+                        <ul>
+                            <li class="first"><span class="item_name">SJSJ</span><span> 3/4 벌룬 슬리브 탑</span></li>
+                            <li class="second"><span>PALE BEIGE / 82 / 1개</span></li>
+                            <li class="third"><span>275,500원</span></li>
+                            <li class="fourth"><span class="stage">입금대기</span><span>(2020.08.04)</span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="order_box">
+            <div class="order_info">
+                <div class="deliv_method">택배배송 200804P06827051</div>
+                <div class="deliv_sub">2020.08.04. 23:38:18</div>
+                <div class="menu_vertical"><img src="image/menu_vertical.png"></div>
+            </div>
+            <ul class="order_item_ul">
+                <li>
+                    <div class="order_item_content">
+                        <div class="order_item_img"><img src="image/SJSJ.jpg"></div>
+                        <ul>
+                            <li class="first"><span class="item_name">SJSJ</span><span> 3/4 벌룬 슬리브 탑</span></li>
+                            <li class="second"><span>PALE BEIGE / 82 / 1개</span></li>
+                            <li class="third"><span>275,500원</span></li>
+                            <li class="fourth"><span class="stage">입금대기</span><span>(2020.08.04)</span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 배송안내 -->
+    <div id="info">
+        <h3>주문 배송 조회 안내</h3>
+        <ul>
+            <li>반품신청은 배송완료 후 7일까지 가능합니다.</li>
+            <li>배송지 수정은 주문완료 상태까지만 가능합니다.</li>
+            <li>배송준비 중 단계에서는 주문 취소/변경이나 배송지 변경이 불가능합니다.</li>
+            <li>가상계좌 결제 시, 4시간 내 입금하지 않으면 주문이 자동으로 취소됩니다.</li>
+        </ul>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer">
+        <ul id="first_row">
+            <li>
+                <a href="Login.html">로그인</a>
+            </li>
+            <li>
+                <a href="CustomerService.html">고객센터</a>
+            </li>
+            <li>
+                <a href="#">매장안내</a>
+            </li>
+        </ul>
+        <ul id="second_row">
+            <li>
+                <a href="#">회원혜택</a>
+            </li>
+            <li>
+                <a href="#">회사소개</a>
+            </li>
+            <li>
+                <a href="#">FAMILY SITE</a>
+            </li>
+        </ul>
+        <ul id="last_row">
+            <li>고객센터 1800-3690 &nbsp;&nbsp; | &nbsp;&nbsp; 서울시 강남구 테헤란로 123 &nbsp;&nbsp; | &nbsp;&nbsp; (주)Group Three</li>
+            <li>사업자등록번호 : 123-89-234567</li>
+        </ul>
+        <ul id="address" class="clear">
+            <li>
+                <address>COPYRIGHT © 2020 SELECTION. ALL RIGHT RESERVED</address>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 하단 메뉴바 -->
+    <div id="bottom_bar">
+        <ul>
+            <li><a href="#"><img src="image/menu.png"></a></li>
+            <li><a href="#"><img src="image/lock.png"></a></li>
+            <li><a href="Main.html"><img src="image/home.png"></a></li>
+            <li><a href="MyHeart.html"><img src="image/heart.png"></a></li>
+            <li><a href="Order_List.html"><img src="image/person.png"></a></li>
+        </ul>
+    </div>
+
+    <!-- 카테고리 바 -->
+    <div id="category_bar">
+        <ul>
+            <li><a href="Best.html">BEST</a></li>
+            <li><a href="New.html">NEW</a></li>
+            <li><a href="Recommend.html">RECOMMEND</a></li>
+            <li><a href="Top.html">TOP</a></li>
+            <li><a href="Dress.html">DRESS</a></li>
+            <li><a href="Pants.html">PANTS</a></li>
+            <li><a href="Outer.html">OUTER</a></li>
+            <li><a href="Acc.html">ACCESSORY</a></li>
+            <li><a href="Announcement.html">NOTICE</a></li>
+            <li><a href="QnA.html">Q&A</a></li>
+        </ul>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(function() {
+        $(".search").click(function() {
+                    $(".title").toggle();
+                    $(".searchbox").toggle();
+                });
+
+        $("#bottom_bar li:first-child").click(function(e) {
+                e.preventDefault();
+                $("#category_bar").slideToggle(100);
+            });
+
+        $("#search2 .search2 li:last-child").click(function() {
+                $("#date").slideToggle(150);
+            });
+
+        });
+
+    </script>
+</body>
+</html>

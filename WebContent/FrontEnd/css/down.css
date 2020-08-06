@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+#btn_down {
+    width: 25px;
+    position: fixed;
+    left: 167px;
+    bottom: 65px;
+}
+
+#btn_down a {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+#btn_down a img {
+    width: 25px;
+    height: 25px;
+    opacity: 0.8;
+}
