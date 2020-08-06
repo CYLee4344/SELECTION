@@ -9,7 +9,7 @@ a {
 
 #menu_bar {
     font-size: 10px;
-    background-color: rgba(230, 232, 229, 1);
+    background-color: #e0cfbd;
     width: 100%;
     height: 50px;
     opacity: 0.8;
@@ -26,7 +26,7 @@ a {
 }
 
 #menu_bar li:hover {
-    background-color: #d1bfb1;
+    background-color: #d0a793;
     font-size: 11px;
     font-weight: bold;
 }
@@ -46,7 +46,7 @@ a {
     font-family: "맑은고딕";
     border: 0;
     background-color: #fff;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 #filter button img {
@@ -67,12 +67,13 @@ a {
 
 #product li {
     float: left;
-    width: 48%;
-    padding: 0 3px 30px 3px;
+    width: calc(50% - 10px);
+    padding: 0 5px 20px 5px;
 }
 
 .img {
     width: 100%;
+    padding-bottom: 10px;
 }
 
 .img a {
@@ -82,16 +83,21 @@ a {
 
 #product .img img {
     width: 100%;
-    height: 250px;
+    height: auto;
 }
 
 .info {
     text-align: center;
 }
 
+.info .price {
+    padding-top: 10px;
+}
 .info p {
+    font-family: "맑은고딕";
     font-size: 11px;
     letter-spacing: 1px;
+    line-height: 1.2;
 }
 
 /** side */
@@ -113,4 +119,16 @@ a {
     width: 35px;
     height: 35px;
     opacity: 0.8;
+}
+
+/** btn */
+#btn {
+    width: 100%;
+    /*border: 0.5px solid #d5d5d5;*/
+    background-color: #e6e8e5;
+    height: 40px;
+    border: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }

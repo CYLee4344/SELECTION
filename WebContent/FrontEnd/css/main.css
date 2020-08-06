@@ -22,7 +22,7 @@ a {
 li.search {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5px;
 }
 
 li.search a {
@@ -32,9 +32,9 @@ li.search a {
 }
 
 li.search img {
-    width: 30px;
-    height: 30px;
-    padding: 10px 5px;
+    width: 24px;
+    height: 24px;
+    padding: 14px 5px;
 }
 
 li.logo {
@@ -46,7 +46,7 @@ li.logo {
 li.cart {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 5px;
 }
 
 
@@ -57,9 +57,9 @@ li.cart a {
 }
 
 li.cart img {
-    width: 30px;
-    height: 30px;
-    padding: 10px 5px;
+    width: 25px;
+    height: 27px;
+    padding: 12px 5px;
 }
 
 .searchbox {
@@ -122,7 +122,6 @@ li.cart img {
 .page {
     width: 100%;
     height: 100%;
-    text-align: center;
     overflow: hidden;
 }
 
@@ -134,11 +133,12 @@ li.cart img {
 
 #container .image_link {
     display: block;
-    margin: 100px 55px 50px 55px;
+    margin: 150px 55px 50px 55px;
 }
 
 #container a img {
     width: 100%;
+    height: auto;
 }
 
 .text {
@@ -153,62 +153,96 @@ li.cart img {
 /** footer (page6) */
 
 #page6 {
-    padding-top: 100px;
-    height: 140px;
+    padding-top: 50px;
     background-color: rgb(236, 226, 219);
 }
 
-#first_row li {
-    float: left;
-    width: 33%;
-}
-
-#second_row li {
-    float: left;
-    width: 33%;
-}
-
-#last_row li {
-    float: left;
-    font-size: 10px;
-    color: rgb(127, 125, 126);
-    padding: 5px 0;
-}
-
-#first_row {
-    padding-top: 10px;
-}
-
-#address {
-    font-size: 10px;
-    color: rgb(127, 125, 126);
-    padding: 5px 0;
+#page6 #first_row img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 10px;
 }
 
 #page6 li a {
-    padding: 10px 0;
+    padding: 10px 15px;
     display: block;
-    width: 100%;
-    height: 11px;
-    text-align: center;
-    font-size: 11px;
-    color: rgb(127, 125, 126);
-    position: static;
+    width: auto;
+    font-size: 16px;
+    color: #222;
+    background-color: #eee;
+    border-bottom: #d5d5d5 solid 0.8px;
 }
 
-.clear {
+#page6 li:last-child a {
+    border-bottom: none;
+}
+
+
+
+/** service */
+
+.p_service {
+    background-color: rgba(208, 167, 147, 0.8);
+    padding: 15px 15px 15px;
+}
+
+#first_row {
+    width: auto;
+    border-top: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+}
+
+
+#second_row {
+    font-size: 12px;
+    color: rgb(127, 125, 126);
+}
+#second_row img {
+    width: 50px;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+#second_row li {
     display: block;
-    clear: both;
+    padding: 17px 10px 10px;
+    float: left;
+    width: calc(50% - 20px);
+    text-align: center;
+}
+#second_row li p {
+    line-height: 1.2;
+
+}
+
+#second_row .pt {
+    color: #222;
+    padding-bottom: 10px;
+}
+
+.clear:after {
     content: '';
+    clear: both;
+    display: block;
     float: none;
 }
 
 #last_row {
-    margin-left: 3%;
+    padding: 10px 15px;
+    position: absolute;
+}
+
+#last_row li {
+    font-size: 10px;
+    color: rgb(127, 125, 126);
+    padding: 5px 0;
 }
 
 #address {
-    margin-left: 3%;
+    font-size: 10px;
+    color: rgb(127, 125, 126);
+    padding: 5px 0;
 }
 
 /** 하단 바텀바 */
@@ -224,7 +258,7 @@ li.cart img {
 
 #bottom_bar ul {
     text-align: center;
-    border-top: 5px solid #fff;
+    border-top: 2px solid #fff;
 
 }
 
@@ -244,8 +278,8 @@ li.cart img {
 }
 
 #bottom_bar li img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     padding: 10px 5px;
 }
 
@@ -276,7 +310,7 @@ li.cart img {
     width: 35px;
     position: fixed;
     right: 15px;
-    bottom: 100px;
+    bottom: 130px;
 }
 
 #side a {
