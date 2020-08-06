@@ -1,15 +1,32 @@
 @charset "utf-8";
-#event{
-    margin-top:10px;
-    margin-bottom:10px;
-    background-color: #ece2db ;
-    width: 100%;
+#event {
+    margin:10px 0;
+    background-color:#ece2db ;
     height: 80px;
     text-align: center;
+    font-size: 14px;
 }
 
+#event h1 {
+    padding-top: 33px;
+}
 
-/* 기본 여백 제거 */
+#btn_ask {
+    width: 90%;
+    display: inline-block;
+	margin-top:20px;
+    margin-left:5%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color:rgb(208, 167, 148, 0.8);
+    text-align: center;
+ 	border: 0px;
+    color: #fff;
+
+}
+ /* 기본 여백 제거 */
 * { margin: 0; padding: 0; }
 
 /* 전체 박스 크기 및 정렬 */
@@ -29,6 +46,7 @@
 }
 
 /* 내용영역의 여백, 글자크기, 테두리, 숨김 */
+
 .content {
     padding: 15px 15px;
     font-size: 12px;
@@ -41,15 +59,10 @@
 /* 마지막 내용 박스의 테두리 보정 */
 .content:last-child { border-bottom: 1px solid #d5d5d5; }
 
-#content1 {
-    display: block;
-}
-
-
 /*[공지] */
-   .high {
+.high {
     font-size: 14px;
-    color: #f00;
+    color: #1199b7;
 }
 
 #date {
@@ -66,19 +79,18 @@
 
 }
 
-#line {
+#line{
 	width: 100%;
 	border-bottom: 2px solid #7F7D7E;
 }
 
-.section_bottom_bar {
+.section_bottom_bar{
 	background-color:rgba(206, 204, 206, 0.8);
 	width: 100%;
 	height: auto;
 	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 20px;
-    margin-bottom: 3px;
+	padding-bottom: 10px;
     line-height: 1.4;
 }
 
@@ -88,14 +100,14 @@
 
 #tel{
 	font-size: 20px;
+
 }
 
 #hour{
 	font-size: 14px;
 }
-
 .hs_paging.bottom {
-    padding: 30px 0;
+    padding: 20px 0;
 }
 .hs_paging {
     text-align: center;
