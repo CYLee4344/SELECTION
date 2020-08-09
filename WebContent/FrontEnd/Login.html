@@ -31,10 +31,12 @@
 <div class="content">
 
     <div class="login_input_area">
-        <form id="loginForm" action="../api/post.do" method="post">
+        <form id="loginForm" class="form-inline">
             <input id="user_id" type="text" name="user_id" class="form-control" placeholder="아이디/이메일을 입력하세요." />
             <br />
             <input id="user_pw" type="password" name="user_pw" class="form-control" placeholder="비밀번호를 입력하세요." />
+            <!-- 결과를 출력하기 위한 HTML -->
+			<div id="result"></div>
             <br />
             <button type="submit" class="btn btn-primary"><h1>로그인</h1></button>
         </form>
@@ -58,6 +60,7 @@
         <a href="Find_PW.html"><button id="find_pw">비밀번호 찾기</button></a>
     </div>
 </div>
+
     <!-- 하단 footer -->
     <div id="footer">
             <ul id="first_row">
@@ -137,12 +140,28 @@
             $("#category_bar").slideToggle(100);
         });
     });
+
+    $(function() {
+        $("#loginForm").submit(function(e) {
+            // <form>태그가 submit되어 페이지가 이동되는 것을 방지한다.
+            e.preventDefault();
+
+            // 사용자의 입력값을 가져온다.
+            var uid = $("#user_id").val();
+            var pwd = $("#user_pw").val();
+
+            $.ajax( {
+                url:"../api/post.do",
+                method: "post",
+                data: { user_id: uid, user_pw: pwd },
+                dataType: 'html',
+                success: function(req) {
+                    $("#result").html(req);
+                }
+            }); // end $ .ajax
+
+        }); // end submit
+    });
     </script>
-
-
-
-
-
-
     </body>
 </html>

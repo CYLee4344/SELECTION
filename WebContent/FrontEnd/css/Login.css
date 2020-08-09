@@ -11,7 +11,7 @@
     width: calc(100% - 14px);
     border: 1px solid #CECCCE;
     padding-left: 10px;
-    color: #CECCCE;
+    color: #222;
 }
 
 .btn {
@@ -23,7 +23,11 @@
     background-color: #D0A793;
     font-size: 14px;
     border:none;
-    margin-top: 25px;
+    margin-top: 15px;
+}
+
+#user_pw {
+	margin-bottom: 10px;
 }
 
 /** 체크박스 **/
@@ -109,4 +113,7 @@
     margin-left: 5px;
 }
 
+h1 .text-danger {
+	color:red;
+}
 
