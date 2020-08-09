@@ -107,6 +107,21 @@ a {
     background: url("../image/truck2.png") no-repeat 0 16.5px;
 }
 
+#cancel_box {
+    background-color: #ccc;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 28px;
+}
+
+#cancel_box img {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
 #order_list_wrap .order_box .order_item_ul > li {
     padding-top: 20px;
     padding-bottom: 15px;
@@ -171,7 +186,7 @@ a {
     color: #666;
 }
 
-#order_list_wrap .order_box .order_info .menu_vertical {
+#order_list_wrap .order_box .order_info .menu_vertical > img {
     position: absolute;
     right: 0;
     top: 24.5px;
@@ -198,7 +213,159 @@ a {
 }
 
 
+/* 모달 */
+#modal {
+  width: 100%;
+  height: 100%;
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  top: 100%;
+  position: fixed;
+  left: 0;
+  background-color: #fff;
+}
 
+#modal.open {
+    top: 0;
+}
+
+/* 헤더 */
+#header {
+    height: 45px;
+}
+
+#header ul {
+    text-align: center;
+}
+
+li.title {
+    font-size: 16px;
+    height: 45px;
+    outline: none;
+}
+
+li.title h1 {
+    padding-top: 16px;
+    color: #222222;
+    letter-spacing: 0;
+}
+
+#header ul li.close_btn img {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#cancel_info_box {
+    background-color: rgb(236, 226, 219);
+    width: 100%;
+    height: 70px;
+    padding: 20px 15px 0 15px;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: center;
+}
+
+#cancel_order_num {
+    font-size: 14px;
+    color: #222222;
+    margin-bottom: 5px;
+}
+
+#cancel_order_date {
+    font-size: 13px;
+    color: #666666;
+        letter-spacing: -0.5px;
+}
+
+/* --------------------- */
+
+#refund_box {
+    padding: 25px 15px;
+    border-bottom: 8px solid rgb(236, 226, 219);
+}
+
+#refund_box li:first-child {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #666666;
+    font-size: 15px;
+}
+
+#refund_box li:last-child {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* ----------------------*/
+
+#refund_info_box {
+    padding: 20px 15px;
+}
+
+#refund_info_box_inner_box {
+    border: 1px solid #e1e1e1;
+    padding: 15px 15px;
+}
+
+#refund_info_box_inner_box .title {
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666666;
+
+}
+#refund_info_box_inner_box .title img {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    cursor: pointer;
+}
+
+#refund_info_box_inner_box .content {
+    font-size: 13px;
+    margin-top: 20px;
+    color: #666666;
+    display: none;
+}
+
+#refund_info_box_inner_box .content h5 {
+    margin-bottom: 10px;
+}
+
+#refund_info_box_inner_box .content ul {
+    padding-left: 13px;
+    list-style: disc;
+    letter-spacing: -0.5px;
+}
+
+#refund_info_box_inner_box .content li {
+    margin-bottom: 10px;
+}
+
+/* ---------------------------- */
+
+#cancel_button_final {
+    height: 50px;
+    padding: 15px;
+}
+
+#cancel_button_final span {
+    display: block;
+    text-align: center;
+    height: 50px;
+    background-color: rgb(208, 167, 147);
+    line-height: 50px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 
 
