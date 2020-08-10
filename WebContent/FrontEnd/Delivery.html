@@ -44,9 +44,9 @@
                 </ul>
                 <div id="date">
                     <ul class="date">
-                        <li class="cal"><input type="date"></li>
+                        <li class="cal"><input type="date" class="date start"></li>
                         <li class="blank">~</li>
-                        <li class="cal"><input type="date"></li>
+                        <li class="cal"><input type="date" class="date end"></li>
                     </ul>
                     <span id="btn">검색</span>
                 </div>
@@ -60,11 +60,11 @@
         <!-- 본문 - 주문 있을 때 -->
         <div id="order_list_wrap">
             <div class="order_box">
-                <div class="order_info">
-                    <div class="deliv_method">택배배송 200804P06827051</div>
+                <div class="order_info pickup">
+                    <div class="deliv_method">방문수령 200804P06827051</div>
                     <div class="deliv_sub">2020.08.04. 23:38:18</div>
                     <div class="menu_vertical">
-                        <img src="image/menu_vertical.png">
+                        <img src="image/bin.png">
                     </div>
                     <!-- <div id="cancel_box">
                         <img src="image/close.png">
@@ -88,10 +88,10 @@
                 </ul>
             </div>
             <div class="order_box">
-                <div class="order_info">
+                <div class="order_info truck">
                     <div class="deliv_method">택배배송 200804P06827051</div>
                     <div class="deliv_sub">2020.08.04. 23:38:18</div>
-                    <div class="menu_vertical"><img src="image/menu_vertical.png"></div>
+                    <div class="menu_vertical"><img src="image/bin.png"></div>
                 </div>
                 <ul class="order_item_ul">
                     <li>
@@ -262,8 +262,6 @@
         </div>
     </div>
 
-
-
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
         $(function() {
@@ -281,6 +279,15 @@
                 $("#date").slideToggle(150);
             });
 
+
+        // 모달창 열기
+        $("#order_list_wrap .menu_vertical img").click(function(event) {
+            $("#modal").addClass("open");
+            $("#modal").css('overflow', 'auto');
+            $('#body').css({'overflow': 'hidden', 'height': '100%'});
+        });
+
+        // + -> -
         $("#refund_info_box_inner_box .title img").click(function() {
             var src = $("#refund_info_box_inner_box .title img");
             if (src.attr("src") == "image/plus.png") {
@@ -291,16 +298,17 @@
                 $("#refund_info_box_inner_box .content").slideToggle(150);
             });
 
-        $("#order_list_wrap .menu_vertical img").click(function(event) {
-            $("#modal").addClass("open");
-            $("#modal").css('overflow', 'auto');
-            $('#body').css({'overflow': 'hidden', 'height': '100%'});
-        });
-
+        // 모달창 닫기
         $("#modal .close_btn img").click(function() {
             $("#modal").removeClass("open");
             $('#body').css({'overflow': 'auto', 'height': '100%'});
         });
+
+        // 조건검색 날짜 지정
+        $("input.end").val(new Date().toISOString().substring(0, 10));
+        $("input.start").attr('max', new Date().toISOString().substring(0, 10));
+
+
     });
 
     </script>

@@ -25,9 +25,7 @@
 }
 
 #input_box {
-    background-color: #999;
     width: 100%;
-    color: red;
 }
 
 #pw {
@@ -44,21 +42,32 @@
     color: rgb(127, 125, 126);
 }
 
+#pw:focus {
+    outline: none;
+}
+
 #button_wrap {
     text-align: center;
     margin-top: 20px;
 }
 
-#button_wrap #cancel {
+#button_wrap .cancel {
     display: inline-block;
     color: #222;
     width: calc(50% - 2.5px);
     border: 1px solid #ccc;
     box-sizing: border-box;
     letter-spacing: -0.5px;
+    height: 40px;
+    background-color: #fff;
+    cursor: pointer;
 }
 
-#button_wrap #ok {
+button.btn {
+    outline: none;
+}
+
+#button_wrap .confirm {
     display: inline-block;
     background: rgb(208, 167, 147);
     color: #fff;
@@ -66,9 +75,6 @@
     border: 1px solid rgb(208, 167, 147);
     box-sizing: border-box;
     letter-spacing: -0.5px;
-}
-
-#button_wrap span {
-    font-size: 14px;
-    line-height: 37px;
+    height: 40px;
+    cursor: pointer;
 }

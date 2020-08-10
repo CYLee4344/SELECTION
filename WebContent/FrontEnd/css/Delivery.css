@@ -58,6 +58,8 @@ a {
     outline: none;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-family: "맑은고딕";
+    padding-left: 7px;
 }
 
 #date ul .blank {
@@ -98,13 +100,22 @@ a {
     border-bottom: 8px solid rgb(236, 226, 219);
 }
 
-#order_list_wrap .order_box .order_info {
+#order_list_wrap .order_box .truck {
     background-color: #fff;
     height: 37px;
     padding: 15px 40px;
     position: relative;
     line-height: 21px;
-    background: url("../image/truck2.png") no-repeat 0 16.5px;
+    background: url("../image/truck.png") no-repeat 0 16.5px;
+}
+
+#order_list_wrap .order_box .pickup {
+    background-color: #fff;
+    height: 37px;
+    padding: 15px 40px;
+    position: relative;
+    line-height: 21px;
+    background: url("../image/pickup.png") no-repeat 1px 18px;
 }
 
 #cancel_box {
@@ -189,8 +200,10 @@ a {
 #order_list_wrap .order_box .order_info .menu_vertical > img {
     position: absolute;
     right: 0;
-    top: 24.5px;
+    top: 20px;
     cursor: pointer;
+    width: 25px;
+    height: 25px;
 }
 
 /* info */
@@ -366,6 +379,4 @@ li.title h1 {
     font-weight: bold;
     cursor: pointer;
 }
-
-
 

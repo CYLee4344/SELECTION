@@ -35,8 +35,8 @@
             <input type="password" id="pw" placeholder="비밀번호를 입력해주세요.">
         </div>
         <div id="button_wrap">
-            <a href="Main.html" id="cancel"><span>취소</span></a>
-            <a href="#" id="ok"><span>확인</span></a>
+            <button type="submit" class="btn cancel">취소</button>
+            <button type="submit" class="btn confirm">확인</button>
         </div>
     </div>
 
@@ -80,7 +80,20 @@
                 e.preventDefault();
                 $("#category_bar").slideToggle(100);
             });
-          });
+
+        $("button.confirm").submit(function(e) {
+            e.preventDefault();
+            });
+
+        $("#pw").focus(function() {
+            $("#pw").attr("placeholder", "");
+            });
+
+        $("#pw").blur(function() {
+            $("#pw").attr("placeholder", "비밀번호를 입력해주세요.");
+
+            });
+        });
     </script>
 </body>
 </html>
