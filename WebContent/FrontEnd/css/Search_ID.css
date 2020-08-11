@@ -1,5 +1,5 @@
 @charset "utf-8";
-/**  전체 영역 여백 **/
+/**  상단 메세지 영역 **/
 .msg {
     padding: 30px 15px 15px;
 }
@@ -7,12 +7,12 @@
     line-height: 25px;
 }
 
+/** 중간 아이디 제시 영역 **/
 .my_ID {
     padding: 15px;
     background-color: rgba(206, 204, 206, 0.8);
     text-align: center;
     height: 130px;
-
 }
 
 .my_ID p {
@@ -27,13 +27,13 @@
     color: #03a9f4;
 }
 
+/** 하단 로그인하기, 비밀번호찾기 버튼 **/
 .bttn {
     padding:0 15px;
     margin-top: 30px;
     margin-bottom: 55px;
     display: block;
     padding-bottom: 15px;
-
 }
 
 .bttn button {

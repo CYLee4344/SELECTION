@@ -259,7 +259,6 @@ li.cart img {
 #bottom_bar ul {
     text-align: center;
     border-top: 2px solid #fff;
-    height: 100%;
 
 }
 
@@ -267,7 +266,6 @@ li.cart img {
     float: left;
     width: 20%;
     line-height: 50px;
-    height: 100%;
 }
 
 #bottom_bar li:first-child {

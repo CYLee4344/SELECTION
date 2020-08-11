@@ -31,16 +31,8 @@ h2 {
 }
 
 .input_ID ul {
-    /*border: 1px solid #CECCCE;*/
     padding: 0 10px;
 }
-
-/*.input_ID li {
-    text-align: left;
-    color: #222;
-    line-height: 30px;
-}*/
-
 
 .input_ID ul li input {
     width: calc(100% - 16px);
@@ -51,12 +43,10 @@ h2 {
 
 input::-webkit-input-placeholder {
   color: #CECCCE;
-
 }
 
 input:-ms-input-placeholder {
   color: #CECCCE;
-
 }
 
 /** 버튼 **/

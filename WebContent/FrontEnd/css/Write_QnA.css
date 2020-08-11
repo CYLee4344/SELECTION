@@ -28,13 +28,22 @@
    	}
 
 	
-	.btn.btn-primary.btn-block{
+  #btn-block{
 		text-align: center;
 		width: 47%;
 		height: 35px;
 
 		background-color: #D0A793;
-		color:#FBF9ED ;
 		border-width: 0px;
 		margin-top: 10px;
 	}
+
+    #a#btn-block{
+    text-align: center;
+    width: 100%;
+    height: 35px;
+
+    background-color: #D0A793;
+    border-width: 0px;
+    margin-top: 10px;
+  }

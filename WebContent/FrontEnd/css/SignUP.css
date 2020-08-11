@@ -1,24 +1,22 @@
 @charset "utf-8";
       
 
-  a {
-    text-decoration: none;
-    color: black;
-                    }
+    #in{
+        font-size: 18px;
+    }   
 
-    ul,ol{
-    list-style: none;
-                        }
-#in {
-    padding: 15px;
-}
-
-        /* 폼 전체 박스 */
-        .form-horizontal {
+    #essen{
+        float: right;
+        font-size: 14px;
+    }
+     
+     /* 폼 전체 박스 */
+        #join_form {
           float: left;
             width: auto;
             margin: auto;
             padding: 0 10px;
+            margin-bottom: 50px;
         }
 
         /* 입력요소 단위 박스 */
@@ -72,6 +70,12 @@
             text-align: center;
         }
 
+        /* 필수항목 표시를 위한 `*` */
+        .identify {
+            font-size: 14px;
+            color: #f00;
+        }
+
         /* 에러 메시지에 대한 글자 색상 */
         .error {
             color: red;
@@ -89,21 +93,33 @@
             padding: 5px 10px;
             margin: 0;
         }
-    
+        /**중복 확인 버튼 */
+        #id_uniq_check{
+            background-color:rgb(208, 167, 148, 0.8) ;
+            font-size:12;
+            color:#ffffff;
+           
+            width: 70px;
+            height: 25px;
+            border:0px;
+        }
         #add_search{
             background-color: rgb(208, 167, 148, 0.8);
             font-size:12;
             color:#ffffff;
             width: 30%;
             height: 25px;
-            border: 0px;
+             border:0px;
         }
 
         /** 이메일 박스*/
         #email{width: 45%;}
         #emailD{width: 45%;
                 height: 25px;}
-     
+        /**아이디 박스 */
+        #user_id{
+            width: 75%;
+        }
        /**주소박스 **/ 
         #address_box1{
             width: 60%;
@@ -111,29 +127,14 @@
         }
        /** 회원가입완료 버튼*/
        #submit{
-         background-color:rgb(208, 167, 148, 0.8);
+         background-color:rgb(208, 167, 147, 0.8);
             font-size:12;
             color:#ffffff;
-            width: 80%;
-            height: 25px;
-            border: 0px;
+            width: 160px;
+            height: 30px;
+             border:0px;
        }
-#withdrawal{
-    width: 100%;
-    height: 30px;
-     background-color: #ffffff;
-    color: #111111;
-     border: 2px solid #7F7D7E;
-     cursor: pointer;
-}      
 
-  #asher{
+       #asher{
         font-size: 12px;
        }
-
-#input_form .clear {
-    float: none;
-    clear: both;
-    content: '';
-    display: block;
-}

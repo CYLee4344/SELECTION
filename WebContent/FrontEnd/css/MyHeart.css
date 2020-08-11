@@ -22,12 +22,21 @@ body, html { width: 100%!important; height: 100%; }
     margin: 6px 0;
     font-size: 13px;
 }
+.page-header ul li:last-child{
+    margin:0px;
+
+}
 
 
 .two_option { margin: 20px; }
 .two_option div { float: left; width: 50%; }
-.two_option .select { text-align: right; }
-.two_option .select select { border: none; }
+.two_option .select {
+    text-align: right;
+     }
+.two_option .select select {
+    border: none;
+    background-color: #fff
+     }
 
 .list ul li {
     width: 50%;
@@ -202,6 +211,7 @@ body, html { width: 100%!important; height: 100%; }
 
 #modal #go_basket .btn_close {
     text-align: right;
+    padding: 5px;
 }
 
 #modal #go_basket p {

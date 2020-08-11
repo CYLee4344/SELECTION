@@ -14,7 +14,7 @@
     <!-- 헤더 -->
     <div id="header">
         <ul>
-            <li class="back"><a href="#"><img src="image/back.png"></a></li>
+            <li class="back"><a href="javascript:history.back()"><img src="image/back.png"></a></li>
             <li class="heart_none"><input type="image" name="heart_none" src="image/heart_none.png"></li>
             <li class="heart"><input type="image" name="heart" src="image/heart.png"></li>
         </ul>
@@ -44,9 +44,9 @@
             <div class="size">
                 <p>사이즈</p>
                 <div class="size_area">
-                    <button>76</button>
-                    <button>82</button>
-                    <button>88</button>
+                    <button class="btn_size">76</button>
+                    <button class="btn_size">82</button>
+                    <button class="btn_size">88</button>
                 </div>
             </div>
         </div>
@@ -261,9 +261,15 @@
                 $(".heart").toggle();
                 $(".heart_none").toggle();
             });
+
             $(".heart").click(function() {
                 $(".heart").toggle();
                 $(".heart_none").toggle();
+            });
+
+            $(".btn_size").click(function() {
+                $(this).addClass('btn_size2')
+                $(".btn_size").not($(this)).removeClass('btn_size2');
             });
 
             $(".explanation .col_a").click(function(e) {
