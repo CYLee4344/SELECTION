@@ -18,7 +18,7 @@
                 <input placeholder="search..." type="text" />
                 <a href=""><img src="image/search.png"></a>
             </div>
-            <li class="title"><h1>베스트</h1></li>
+            <li class="title"><h1>outer</h1></li>
             <li class="cart"><a href="ShoppingCart.jsp"><img src="image/shopping_cart.png"></a></li>
         </ul>
     </div>
