@@ -34,9 +34,15 @@
         <div id="input_box">
             <input type="password" id="pw" placeholder="비밀번호를 입력해주세요.">
         </div>
+        <p id="enter_pw_msg">비밀번호를 입력하세요.</p>
+        <div id="hidden_msg_wrap">
+            <p id="wrong_pw_msg">입력하신 비밀번호가 일치하지 않습니다.</p>
+            <a href="Find_PW.html"><span>비밀번호 찾기</span></a>
+        </div>
+
         <div id="button_wrap">
-            <button type="submit" class="btn cancel">취소</button>
-            <button type="submit" class="btn confirm">확인</button>
+            <a href="Main.html" id="cancel"><span>취소</span></a>
+            <a href="#" id="ok"><span>확인</span></a>
         </div>
     </div>
 
@@ -68,6 +74,7 @@
         </ul>
     </div>
 
+
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
         $(function() {
@@ -81,18 +88,26 @@
                 $("#category_bar").slideToggle(100);
             });
 
-        $("button.confirm").submit(function(e) {
+        $("#pw").on({
+            focus: function() {
+                $("#pw").attr("placeholder", "");
+            },
+            blur: function() {
+                $("#pw").attr("placeholder", "비밀번호를 입력해주세요.");
+            }
+        });
+
+        $("#ok").click(function(e) {
             e.preventDefault();
-            });
+            if ($("#pw").val() == "") {
+                $("#enter_pw_msg").show();
+                $("#hidden_msg_wrap").hide();
+            } else {
+                $("#enter_pw_msg").hide();
+                $("#hidden_msg_wrap").show();
+            }
+        });
 
-        $("#pw").focus(function() {
-            $("#pw").attr("placeholder", "");
-            });
-
-        $("#pw").blur(function() {
-            $("#pw").attr("placeholder", "비밀번호를 입력해주세요.");
-
-            });
         });
     </script>
 </body>
