@@ -42,16 +42,23 @@ a {
     float: right;
 }
 
+#filter span {
+    font-family: "맑은고딕";
+    font-size: 11px;
+    padding: 1px 6px;
+}
+
 #filter button {
     font-family: "맑은고딕";
     border: 0;
     background-color: #fff;
     font-size: 11px;
+    outline: none;
+    cursor: pointer;
 }
 
-#filter button img {
+#filter span img {
     width: 20px;
-    vertical-align: middle;
 }
 
 .clear:after {

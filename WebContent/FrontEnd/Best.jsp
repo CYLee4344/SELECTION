@@ -1,22 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page trimDirectiveWhitespaces="true" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>THE SELECTION</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <%@ include file="inc/same_css.jsp"%>
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/common_contents.css" />
-    <link rel="stylesheet" type="text/css" href="css/bottom_bar.css" />
-    <link rel="stylesheet" type="text/css" href="css/footer.css" />
 </head>
 
 <body>
     <!-- 헤더 -->
     <div id="header">
         <ul>
-            <li class="back"><a href="javascript:history.back()"><img src="image/back.png"></a></li>
+            <li class="back"><a href="#"><img src="image/back.png"></a></li>
             <li class="search"><a href="#"><img src="image/search.png"></a></li>
             <div class="searchbox">
                 <input placeholder="search..." type="text" />
@@ -55,77 +51,21 @@
     </div>
 
     <!-- footer -->
-    <div id="footer">
-        <ul id="first_row">
-            <li>
-                <a href="Login.html">로그인</a>
-            </li>
-            <li>
-                <a href="CustomerService.html">고객센터</a>
-            </li>
-            <li>
-                <a href="#">매장안내</a>
-            </li>
-        </ul>
-        <ul id="second_row">
-            <li>
-                <a href="#">회원혜택</a>
-            </li>
-            <li>
-                <a href="#">회사소개</a>
-            </li>
-            <li>
-                <a href="#">FAMILY SITE</a>
-            </li>
-        </ul>
-        <ul id="last_row">
-            <li>고객센터 1800-3690 &nbsp;&nbsp; | &nbsp;&nbsp; 서울시 강남구 테헤란로 123 &nbsp;&nbsp; | &nbsp;&nbsp; (주)Group Three</li>
-            <li>사업자등록번호 : 123-89-234567</li>
-        </ul>
-        <ul id="address" class="clear">
-            <li>
-                <address>COPYRIGHT © 2020 SELECTION. ALL RIGHT RESERVED</address>
-            </li>
-        </ul>
-    </div>
+    <%@ include file="inc/footer.jsp"%>
 
     <!-- top 버튼 -->
     <div id="side">
         <a href="#" class="top"><img src="image/arrow_up.png"></a>
     </div>
 
-    <!-- 하단 메뉴바 -->
-    <div id="bottom_bar">
-        <ul>
-            <li><a href="#"><img src="image/menu.png"></a></li>
-            <li><a href="Login.html"><img src="image/lock.png"></a></li>
-            <li><a href="Main.html"><img src="image/home.png"></a></li>
-            <li><a href="MyHeart.html"><img src="image/heart.png"></a></li>
-            <li><a href="Order_List.html"><img src="image/person.png"></a></li>
-        </ul>
-    </div>
-
-    <!-- 카테고리 바 -->
-    <div id="category_bar">
-        <ul>
-            <li><a href="Best.html">BEST</a></li>
-            <li><a href="New.html">NEW</a></li>
-            <li><a href="Recommend.html">RECOMMEND</a></li>
-            <li><a href="Top.html">TOP</a></li>
-            <li><a href="Dress.html">DRESS</a></li>
-            <li><a href="Pants.html">PANTS</a></li>
-            <li><a href="Outer.html">OUTER</a></li>
-            <li><a href="Acc.html">ACCESSORY</a></li>
-            <li><a href="Announcement.html">NOTICE</a></li>
-            <li><a href="QnA.html">Q&A</a></li>
-        </ul>
-    </div>
+    <!-- bottom_bar -->
+    <%@ include file="inc/bottom_bar.jsp"%>
 
     <script type="text/x-handlebars-template" id="list-item-tmpl">
         {{#item}}
         <li>
             <div class="img">
-                <a href="Detail.html">
+                <a href="#">
                     <img src="{{img}}" class="img_g">
                 </a>
             </div>
@@ -140,12 +80,13 @@
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="plugins/handlebars/handlebars-v4.0.11.js"></script>
-    <script src="js/item.js"></script>
     <script type="text/javascript">
         function add_item() {
-            var template = Handlebars.compile($("#list-item-tmpl").html());
-            var html = template(data)
-            $("#grid").append(html);
+        	$.get("js/item.json", function(req) {
+                var template = Handlebars.compile($("#list-item-tmpl").html());
+                var html = template(req)
+                $("#grid").append(html);
+            });
         }
 
         $(function() {
