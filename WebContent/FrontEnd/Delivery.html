@@ -319,16 +319,20 @@
         $("input.end").val(new Date().toISOString().substring(0, 10));
         $("input.start").attr('max', new Date().toISOString().substring(0, 10));
 
+        // 팝업창 열기
         $("#cancel_button_final").click(function() {
             $("#pop_container").fadeIn(300);
             $("#pop").fadeIn(300);
+            $('#modal').css({'overflow': 'hidden', 'height': '100%'});
         });
 
+        // 팝업창 닫기
         $("#pop img").click(function() {
             $("#pop_container").fadeOut(300);
             $("#pop").fadeOut(300);
         });
 
+        // 팝업, 모달 닫기
         $("#pop span:last-child").click(function() {
             $("#pop_container").fadeOut(300);
             $("#pop").fadeOut(300);
