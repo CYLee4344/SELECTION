@@ -3,6 +3,7 @@ package study.ajax.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,9 +28,7 @@ public class Post extends HttpServlet {
 		if (userPw == null) { userPw = ""; }
 
 		PrintWriter out = response.getWriter();
-		if (userId.equals("ajax") && userPw.equals("123qwe!@#")) {
-			response.sendRedirect("/SELECTION/WebContent/FrontEnd/Main.html");
-		} else {
+		if (!userId.equals("ajax") || !userPw.equals("123qwe!@#")) {
 			out.write("<h1 style='color: #c21807; font-size:11px; margin-top: 10px;' class='text-danger'>아이디 또는 비밀번호가 올바르지 않습니다.</h1>");
 		}
 	}

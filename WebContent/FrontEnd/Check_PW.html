@@ -36,7 +36,7 @@
         </div>
         <p id="enter_pw_msg">비밀번호를 입력하세요.</p>
         <div id="hidden_msg_wrap">
-            <p id="wrong_pw_msg">입력하신 비밀번호가 일치하지 않습니다.</p>
+            <p id="wrong_pw_msg">비밀번호가 일치하지 않습니다.</p>
             <a href="Find_PW.html"><span>비밀번호 찾기</span></a>
         </div>
 
@@ -45,6 +45,7 @@
             <a href="#" id="ok"><span>확인</span></a>
         </div>
     </div>
+
 
 
     <!-- 하단 메뉴바 -->
@@ -101,6 +102,7 @@
             e.preventDefault();
             if ($("#pw").val() == "") {
                 $("#enter_pw_msg").show();
+                $("#pw").focus();
                 $("#hidden_msg_wrap").hide();
             } else {
                 $("#enter_pw_msg").hide();

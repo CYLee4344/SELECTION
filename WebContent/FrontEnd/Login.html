@@ -28,17 +28,17 @@
     </div>
 
     <!-- 로그인 정보 입력 -->
-<div class="content">
+	<div class="content">
 
     <div class="login_input_area">
-        <form id="loginForm" class="form-inline">
+        <form id="loginForm" class="form-inline" method="post">
             <input id="user_id" type="text" name="user_id" class="form-control" placeholder="아이디/이메일을 입력하세요." />
             <br />
             <input id="user_pw" type="password" name="user_pw" class="form-control" placeholder="비밀번호를 입력하세요." />
             <!-- 결과를 출력하기 위한 HTML -->
 			<div id="result"></div>
             <br />
-            <button type="submit" class="btn btn-primary"><h1>로그인</h1></button>
+            <button type="submit" class="btn btn-primary" id="btn">로그인</button>
         </form>
 
         <div class="login_checking">
@@ -61,7 +61,7 @@
         <a href="Find_PW.html"><button id="find_pw">비밀번호 찾기</button></a>
     </div>
 
-</div>
+	</div>
 
     <!-- 하단 footer -->
     <div id="footer">
@@ -142,7 +142,8 @@
             $("#category_bar").slideToggle(100);
         });
     });
-
+	
+    /** 로그인 양식 입력 시 **/
     $(function() {
         $("#loginForm").submit(function(e) {
             // <form>태그가 submit되어 페이지가 이동되는 것을 방지한다.
@@ -151,19 +152,40 @@
             // 사용자의 입력값을 가져온다.
             var uid = $("#user_id").val();
             var pwd = $("#user_pw").val();
-
-            $.ajax( {
-                url:"../api/post.do",
-                method: "post",
-                data: { user_id: uid, user_pw: pwd },
-                dataType: 'html',
-                success: function(req) {
-                    $("#result").html(req);
-                }
-            }); // end $ .ajax
-
+            
+            // 올바른 ID와 PW를 입력 시,
+            if (uid == "ajax" && pwd == "123qwe!@#" ) {
+            	location.href='Main.html'; 
+            } else {
+	            $.ajax( {
+	                url:"../api/post.do",
+	                method: "post",
+	                data: { user_id: uid, user_pw: pwd },
+	                dataType: 'html',
+	                success: function(req) {
+	                    $("#result").html(req);
+	                }
+	            }); // end $ .ajax
+            } // 틀린 ID와 PW를 입력 시
         }); // end submit
+        
+     // 3회, 5회 잘못입력 시 오류를 위한 조건문
+     	var counter = 0;
+     	$("#btn").click(function(e) {
+     		counter++;
+
+     	if (counter == 3) {
+     		alert ("잘못된 비밀번호를 3회 입력하셨습니다. 5회이상 입력시 로그인은 제한됩니다.")
+     	} else if (counter == 5) {
+     		alert ("잘못된 비밀번호를 5회 입력하셨습니다. 비밀번호 찾기 페이지로 이동합니다.")
+     		location.href='Find_PW.html'; 
+     	}
+     	
+     	});
     });
+    
+ 	
+
     </script>
     </body>
 </html>

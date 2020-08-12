@@ -260,7 +260,18 @@
         <div id="cancel_button_final">
             <span>275,000원 주문취소</span>
         </div>
+
+        <!-- 팝업창  -->
+        <div id="pop_container">
+            <div id="pop">
+                    <span>주문을 취소하시겠습니까?</span>
+                <img src="image/close.png">
+                    <span>확인</span>
+            </div>
+        </div>
     </div>
+
+
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
@@ -308,7 +319,22 @@
         $("input.end").val(new Date().toISOString().substring(0, 10));
         $("input.start").attr('max', new Date().toISOString().substring(0, 10));
 
+        $("#cancel_button_final").click(function() {
+            $("#pop_container").fadeIn(300);
+            $("#pop").fadeIn(300);
+        });
 
+        $("#pop img").click(function() {
+            $("#pop_container").fadeOut(300);
+            $("#pop").fadeOut(300);
+        });
+
+        $("#pop span:last-child").click(function() {
+            $("#pop_container").fadeOut(300);
+            $("#pop").fadeOut(300);
+            $("#modal").removeClass("open");
+            $('#body').css({'overflow': 'auto', 'height': '100%'});
+        })
     });
 
     </script>
