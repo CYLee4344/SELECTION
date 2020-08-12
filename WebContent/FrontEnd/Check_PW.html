@@ -29,7 +29,7 @@
 
     <div id="gray_area">고객님의 정보보호를 위하여 비밀번호를 다시 한 번 확인합니다.</div>
 
-    <div id="container">
+    <form id="container" method="post">
         <div id="id_wrap"><span id="id">cyl******</span></div>
         <div id="input_box">
             <input type="password" id="pw" placeholder="비밀번호를 입력해주세요.">
@@ -41,10 +41,12 @@
         </div>
 
         <div id="button_wrap">
-            <a href="Main.html" id="cancel"><span>취소</span></a>
-            <a href="#" id="ok"><span>확인</span></a>
+            <button id="cancel" onclick="window.open('Main.html')">취소</button>
+            <!-- <a href="Main.html" id="cancel"><span>취소</span></a> -->
+            <button type="submit" id="ok">확인</button>
+            <!-- <a href="#" id="ok"><span>확인</span></a> -->
         </div>
-    </div>
+    </form>
 
 
 

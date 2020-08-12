@@ -82,6 +82,10 @@
     margin-top: 20px;
 }
 
+#button_wrap button {
+    outline: none;
+}
+
 #button_wrap #cancel {
     display: inline-block;
     color: #222;
@@ -89,6 +93,8 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
     letter-spacing: -0.5px;
+    height: 40px;
+    background-color: #fff;
 }
 
 #button_wrap #ok {
@@ -99,11 +105,12 @@
     border: 1px solid rgb(208, 167, 147);
     box-sizing: border-box;
     letter-spacing: -0.5px;
+    height: 40px;
 }
 
-#button_wrap span {
+#button_wrap {
     font-size: 14px;
-    line-height: 37px;
+    line-height: 40px;
 }
 
 
